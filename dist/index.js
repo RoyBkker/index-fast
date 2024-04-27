@@ -54,11 +54,11 @@ ${body}`);
 }
 
 // src/lib/gsc.mts
-function convertToSiteUrl(input2) {
-  if (input2.startsWith("http://") || input2.startsWith("https://")) {
-    return input2.endsWith("/") ? input2 : `${input2}/`;
+function convertToSiteUrl(input) {
+  if (input.startsWith("http://") || input.startsWith("https://")) {
+    return input.endsWith("/") ? input : `${input}/`;
   }
-  return `sc-domain:${input2}`;
+  return `sc-domain:${input}`;
 }
 async function getPageIndexingStatus(accessToken, siteUrl, inspectionUrl) {
   try {
@@ -210,9 +210,8 @@ async function getSitemapPages(accessToken, siteUrl) {
 // src/index.mts
 import { readFileSync as readFileSync2, existsSync as existsSync2, mkdirSync, writeFileSync } from "fs";
 var CACHE_TIMEOUT = 1e3 * 60 * 60 * 24 * 14;
-var input = process.argv[2];
-async function processSite(input2) {
-  if (!input2) {
+async function processSite(input) {
+  if (!input) {
     console.error(
       "\u274C Please provide a domain or site URL as the first argument."
     );
@@ -220,7 +219,7 @@ async function processSite(input2) {
     process.exit(1);
   }
   const accessToken = await getAccessToken();
-  const siteUrl = convertToSiteUrl(input2);
+  const siteUrl = convertToSiteUrl(input);
   console.log(`\u{1F50E} Processing site: ${siteUrl}`);
   const cachePath = `.cache/${siteUrl.replace("http://", "http_").replace("https://", "https_").replace("/", "_")}.json`;
   if (!accessToken) {
@@ -309,7 +308,6 @@ async function processSite(input2) {
   console.log(`\u{1F496} Brought to you by https://twitter.com/RoyalB88`);
   console.log(``);
 }
-processSite(input).catch(console.error);
 export {
   processSite
 };
