@@ -2,7 +2,7 @@
   "name": "@roybakker/index-fast",
   "version": "1.0.0",
   "description": "This script helps get your whole site noticed by Google in less than 48 hours. It's simple and uses a Google API.",
-  "main": "src/index.mts",
+  "main": "dist/index.mts",
   "type": "module",
   "scripts": {
     "tsc": "tsc",
