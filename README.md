@@ -42,3 +42,7 @@ GPL-3.0-only
 This project is supported by [BrickifyMe](https://www.BrickifyMe.com)
 
 ![](https://www.Brickifyme.com/og-twitter-card-1.png)
+
+## Credits
+
+- Inspired by https://github.com/goenning
