@@ -2,9 +2,10 @@
   "name": "@roybakker/index-fast",
   "version": "1.0.5",
   "description": "This script helps get your whole site noticed by Google in less than 48 hours. It's simple and uses a Google API.",
-  "main": "dist/index.mts",
+  "main": "dist/index.js",
   "type": "module",
-  "module": "dist/index.mts",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "require": "./dist/index.cjs",
@@ -40,6 +41,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/RoyBkker/index-fast.git"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "bugs": {
     "url": "https://github.com/RoyBkker/index-fast/issues"
