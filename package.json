@@ -4,9 +4,22 @@
   "description": "This script helps get your whole site noticed by Google in less than 48 hours. It's simple and uses a Google API.",
   "main": "dist/index.mts",
   "type": "module",
+  "module": "dist/index.mts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "tsc": "tsc",
-    "start": "tsx ./src/index.mts"
+    "build": "tsup src/index.mts --format esm,cjs --dts --sourcemap",
+    "publish:ci": "pnpm build && pnpm changeset publish",
+    "start": "tsx ./src/index.mts",
+    "tsc": "tsc"
   },
   "keywords": [
     "Google index, indexing, Google API, Google, Google Search Console, Google Search, Google Search Console API, Google Search Console API v1, Google Search Console API v1.7, Google Search Console API v1.7.0, Google Search Console API v1.7.0.0, Google Search Console API v1."
@@ -20,6 +33,7 @@
   },
   "devDependencies": {
     "@types/node": "20.12.7",
+    "tsup": "8.0.2",
     "typescript": "5.4.5"
   },
   "repository": {
