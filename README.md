@@ -14,18 +14,16 @@ This script helps get your whole site noticed by Google in less than 48 hours. I
 3. Turn on both the `Google Search Console API` and the `Web Search Indexing API` in your [Google Project ➤ API Services ➤ Enabled API & Services](https://console.cloud.google.com/apis/dashboard).
 4. [Download the JSON](https://github.com/goenning/google-indexing-script/issues/2) file with your service account's credentials and save it in the same folder as the script. Name the file `service_account.json`.
 
-5. - If your site is a `Domain` Property on GSC, use it like `processSite('https://example.com')`.
+5. - If your site is a `Domain` Property on GSC, use it like `processSite('example.com')`.
    - If it's a `URL Prefix` property, use it like `processSite('https://www.example.com')`.
-   - If unsure, try both 😀.
+   - If unsure, try both 😀. Or have a look in your Google Search Console for the correct property naming.
 
 ## Example
 
 ```
-import { processSite } from '@roybakker/index-fast';
+import { processSite } from "@roybakker/index-fast";
 
-    processSite('https://example.com').then(() => {
-    console.log('Processing complete.');
-    }).catch(console.error);
+processSite("brickifyme.com");  // or processSite("https://www.brickifyme.com");
 
 ```
 
