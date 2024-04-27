@@ -1,0 +1,25 @@
+{
+  "name": "index-fast",
+  "version": "1.0.0",
+  "description": "This script helps get your whole site noticed by Google in less than 48 hours. It's simple and uses a Google API.",
+  "main": "src/index.mts",
+  "type": "module",
+  "scripts": {
+    "tsc": "tsc",
+    "start": "tsx ./src/index.mts"
+  },
+  "keywords": [
+    "Google index, indexing, Google API, Google, Google Search Console, Google Search, Google Search Console API, Google Search Console API v1, Google Search Console API v1.7, Google Search Console API v1.7.0, Google Search Console API v1.7.0.0, Google Search Console API v1."
+  ],
+  "author": "Roy Bakker",
+  "license": "GPL-3.0-only",
+  "dependencies": {
+    "google-auth-library": "9.9.0",
+    "googleapis": "135.0.0",
+    "sitemapper": "3.2.8"
+  },
+  "devDependencies": {
+    "@types/node": "20.12.7",
+    "typescript": "5.4.5"
+  }
+}
