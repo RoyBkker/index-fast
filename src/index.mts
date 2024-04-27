@@ -11,7 +11,6 @@ import { batch } from "./lib/utils.mjs";
 import { readFileSync, existsSync, mkdirSync, writeFileSync } from "fs";
 
 const CACHE_TIMEOUT = 1000 * 60 * 60 * 24 * 14; // 14 days
-const input = process.argv[2];
 
 export async function processSite(input: string) {
   if (!input) {
@@ -136,5 +135,3 @@ export async function processSite(input: string) {
   console.log(`💖 Brought to you by https://twitter.com/RoyalB88`);
   console.log(``);
 }
-
-processSite(input).catch(console.error);
