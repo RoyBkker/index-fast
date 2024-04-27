@@ -32,6 +32,7 @@
     "sitemapper": "3.2.8"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.27.1",
     "@types/node": "20.12.7",
     "tsup": "8.0.2",
     "typescript": "5.4.5"
